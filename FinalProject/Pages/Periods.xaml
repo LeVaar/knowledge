@@ -1,0 +1,57 @@
+﻿<Page x:Class="FinalProject.Pages.Periods"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FinalProject.Pages"
+      mc:Ignorable="d"
+      Title="Periods" Height="450" Width="580">
+    <Grid>
+        <StackPanel>
+            
+            <TextBlock Text="Число периодов динамики" Margin="40, 0, 0, 0" FontSize="14" />
+            <TextBlock />
+            <TextBlock Text="Выберите заболевание" Margin="80, 0, 0, 0" />
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <ComboBox/>
+                    <TextBlock Text="Выберите признак" Margin="0, 3, 0, 0" />
+                    <ComboBox/>
+                    <Button Content="Перейти к редактированию"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="1">
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Признак"/>
+                            <DataGridTextColumn Header="Название периода"/>
+                            <DataGridTextColumn Header="Нижняя граница"/>
+                            <DataGridTextColumn Header="Верхняя граница"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                    <Button Content="Добавить период" Width="100" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
