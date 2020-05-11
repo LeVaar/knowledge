@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using DevExpress.Mvvm;
@@ -17,22 +18,11 @@ namespace FinalProject.ViewModel
         private Page Signs;
         private Page SignsPeriods;
 
-        // private Page _currentPage;
-        // public Page CurrentPage 
-        // {
-        //      get => _currentPage;
-        //      set
-        //      {
-        //          _currentPage = value;
-        //          RaisePropertyChanged(() => CurrentPage);
-        //      }
-        // }
-        
         public Page CurrentPage { get; set; }
-        
+
         public MainViewModel()
         {
-            Diseases = new Diseases();
+            Diseases = new Pages.Diseases();
             Bait = new Bait();
             NormalSigns = new Pages.NormalSigns();
             Periods = new Pages.Periods();
@@ -85,7 +75,7 @@ namespace FinalProject.ViewModel
                 return new DelegateCommand(() => { CurrentPage = Signs; });
             }
         }
-        public ICommand SPClick
+        public ICommand SpClick
         {
             get
             {

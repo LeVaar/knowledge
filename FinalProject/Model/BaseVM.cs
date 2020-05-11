@@ -6,6 +6,12 @@ namespace FinalProject.ViewModel
 {
     public class BaseVM : INotifyPropertyChanged
     {
+        /*protected BaseVM()
+        {
+            RegisterCommands();
+        }
+        protected virtual void RegisterCommands(){}*/
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void RaisePropertyChanged([CallerMemberName] string prop = "")

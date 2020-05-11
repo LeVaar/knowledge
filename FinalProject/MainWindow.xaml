@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:FinalProject"
         xmlns:viewModel="clr-namespace:FinalProject.ViewModel"
         mc:Ignorable="d"
-        Title="Редактор базы знаний медицинской диагностики" Height="350" Width="800">
+        Title="Диагностика состояния пациента" Height="350" Width="800">
     
         <Window.DataContext>
-            <viewModel:MainViewModel />
+            <viewModel:MainViewModel/>
         </Window.DataContext>
+    
         <Grid>
             
             <Grid.ColumnDefinitions>
@@ -20,17 +21,17 @@
             
             <StackPanel>
                 <TextBlock 
-                    Text="Разделы базы знаний" 
+                    Text="Диагностика состояния пациента" 
                     FontSize="14" 
                     HorizontalAlignment="Left" />
                 <TextBlock />
-                <Button Command="{Binding DClick}" Content="Заболевания" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding SignsClick}" Content="Признаки" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding PossibleClick}" Content="Возможные значения признаков" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding NormalClick}" Content="Нормальные значения признаков" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding PictureClick}" Content="Клиническая картина" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding PeriodClick}" Content="Число периодов динамики" FontSize="12" HorizontalContentAlignment="Left" />
-                <Button Command="{Binding SPClick}" Content="Значения признаков для периодов" FontSize="12" HorizontalContentAlignment="Left" />
+                <Button Command="{Binding DClick}" Content="Заболевания" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding SignsClick}" Content="Признаки" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding PossibleClick}" Content="Возможные значения признаков" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding NormalClick}" Content="Нормальные значения признаков" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding PictureClick}" Content="Клиническая картина" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding PeriodClick}" Content="Число периодов динамики" FontSize="12" HorizontalContentAlignment="Center" />
+                <Button Command="{Binding SpClick}" Content="Значения признаков для периодов" FontSize="12" HorizontalContentAlignment="Center" />
             </StackPanel>
             <Frame 
                 Grid.Column="1"
